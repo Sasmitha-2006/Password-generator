@@ -2,8 +2,7 @@ from string import ascii_letters, digits, punctuation
 from random import choice, sample
 import tkinter as tk
 from tkinter import messagebox
-
-# === Helper Functions ===
+
 
 def is_even(integer):
     return integer % 2 == 0
@@ -67,8 +66,7 @@ def generate_password(passlen=8, include_chars="", exclude_chars=""):
         password = password[:-1] + choice(s)
 
     return password
-
-# === New Unique Features ===
+
 
 def readability_score(password):
     vowels = "aeiouAEIOU"
@@ -95,8 +93,7 @@ def detect_weak_patterns(password):
         if seq[0] == seq[1] == seq[2]:
             return "Contains repeated characters (e.g., aaa)"
     return "No weak patterns detected."
-
-# === GUI ===
+
 
 def show_result(password, strength, color):
     def copy_to_clipboard():
@@ -144,8 +141,7 @@ def show_result(password, strength, color):
     tk.Button(root, text="Show/Hide Password", command=toggle_password_visibility, font=("Arial", 10), bg="white", fg="black").pack(pady=(5, 5))
 
     root.mainloop()
-
-# === Main Execution ===
+
 
 if __name__ == "__main__":
     try:
