@@ -141,7 +141,7 @@ def show_result(password, strength, color):
     tk.Button(root, text="Show/Hide Password", command=toggle_password_visibility, font=("Arial", 10), bg="white", fg="black").pack(pady=(5, 5))
 
     root.mainloop()
-
+
 
 if __name__ == "__main__":
     try:
